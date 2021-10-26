@@ -42,8 +42,11 @@
                         break;
                     } else {
                         foundMail = false;
-                        alert('accesso negato');
+                        alert('accesso negato!');
+                        // loginBox.classList.add('d-none');
+                        // document.getElementById('denied').classList.remove('d-none');
                         break;
+                        
                     }
                 }
             }
