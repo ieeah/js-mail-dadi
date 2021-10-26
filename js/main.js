@@ -95,21 +95,15 @@
         }
         });
 
-
-        // // al click del div .close tutti i div != da loginBox prendono la classe d-none
-        // closeButton.addEventListener('click', function() {
-        //     gameBoard.classList.add('d-none');
-        //     denied.classList.add('d-none');
-        //     loginBox.classList.remove('d-none');
-        // });
-
         closeButton1.addEventListener('click', function() {
-            gameBoard.classList.add('d-none');
-            denied.classList.add('d-none');
-            loginBox.classList.remove('d-none');
+            window.location.reload();
+            // gameBoard.classList.add('d-none');
+            // denied.classList.add('d-none');
+            // loginBox.classList.remove('d-none');
         });
         closeButton2.addEventListener('click', function() {
-            gameBoard.classList.add('d-none');
-            denied.classList.add('d-none');
-            loginBox.classList.remove('d-none');
+            window.location.reload();
+            // gameBoard.classList.add('d-none');
+            // denied.classList.add('d-none');
+            // loginBox.classList.remove('d-none');
         });
