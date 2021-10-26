@@ -24,6 +24,8 @@
         const dado1 = document.getElementById('n1');
         // il dado del pc
         const dado2 = document.getElementById('n2');
+        // il display con il risultato finale
+        const display = document.getElementById('result');
 
 
         // creazione dell'array contenente gli indirizzi mail autorizzati all'accesso
@@ -83,12 +85,19 @@
 
         // // determinare quale dei due sia maggiore
         // // stampare chi ha vinto
+        if (n1 === n2) {
+            display.innerText = `questo è un pareggio!`;
+        } else if (n1 > n2) {
+            display.innerText = `hai vinto!`;
+        } else {
+            display.innerText = `:( hai perso! :(`;
+        }
         });
 
 
         // // al click del div .close tutti i div != da loginBox prendono la classe d-none
-        // closeButton.addEventListener('click', function() {
-        //     gameBoard.classList.add('d-none');
-        //     denied.classList.add('d-none');
-        //     loginBox.classList.remove('d-none');
-        // });
+        closeButton.addEventListener('click', function() {
+            gameBoard.classList.add('d-none');
+            denied.classList.add('d-none');
+            loginBox.classList.remove('d-none');
+        });
