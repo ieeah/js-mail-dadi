@@ -23,13 +23,13 @@
 
 
         // creazione dell'array contenente gli indirizzi mail autorizzati all'accesso
-        const mailList = ['info@boolean.com', 'paolo.duzioni@gmail.com', 'lbnfnc90@gmail.com', 'w.churchill@uk.gov.com', 'jesuswasahippie@hotmail.it'];
+        const lista = ['info@boolean.com', 'paolo.duzioni@gmail.com', 'lbnfnc90@gmail.com', 'w.churchill@uk.gov.com', 'jesuswasahippie@hotmail.it'];
 
 
         //l'utente clicca sul pulsante di login
         btnLogin.addEventListener('click', function() {
             //viene creata una nuova variabile contenente la mail inserita nell input del form, con le dovute modifiche al formato
-            let nowMail = inputEmail.value.trim().toLowerCase();
+            const nowMail = inputEmail.value.trim().toLowerCase();
 
             //parte la ricerca all'interno dell'array per verificare se sia autoriizzata o meno all'accesso
             //se nessuna mail è stata inserita, allora verrà stampato un alert
@@ -39,20 +39,28 @@
                 // controllo presenza mail nella lista mailList
                 //altrimenti creiamo una flag
                 // let foundMail = false;
-                for (i = 0; i <= 4 ; i++) {
+                for (i = 0; i < lista.length ; i++) {
                     //se la mail inserita è uguale ad una delle mail contenute nell'array
-                    if (nowMail === mailList[i]) {
-                        loginBox.classList.add('d-none');
-                        denied.classList.remove('d-none');
-                        break;
-                        
-                    } else {
-                        // foundMail = false;
-                        loginBox.classList.add('d-none');
+                    if ( nowMail === lista[i]) {
                         gameBoard.classList.remove('d-none');
+                        loginBox.classList.add('d-none');
+                        denied.classList.add('d-none');
                         break;
-
+                    } else {
+                        denied.classList.remove('d-none');
+                        loginBox.classList.add('d-none');
                     }
+                    
+                    // if (nowMail !== lista[i]) {
+                    //     alert('accesso negato');
+                    //     // loginBox.classList.add('d-none');
+                    //     // denied.classList.remove('d-none');
+                    // } else if ( nowMail === lista[i] ) {
+                    //     alert('accesso consentito');
+                    //     // loginBox.classList.add('d-none');
+                    //     // gameBoard.classList.remove('d-none');
+                    //     break;
+                    // }
                 }
             }
         });
@@ -60,18 +68,18 @@
 
 
 
-        // al click del bottone si dovrà generare un numero, compreso tra 1 e 6
-        // generare un secondo numero, compreso tra 1 e 6
-        // stampare, all'interno di .dado #n1 e #n2 i due numeri generati
-        // determinare quale dei due sia maggiore
-        // stampare chi ha vinto
-        genButton.addEventListener('click', function() {
-        });
+        // // al click del bottone si dovrà generare un numero, compreso tra 1 e 6
+        // // generare un secondo numero, compreso tra 1 e 6
+        // // stampare, all'interno di .dado #n1 e #n2 i due numeri generati
+        // // determinare quale dei due sia maggiore
+        // // stampare chi ha vinto
+        // genButton.addEventListener('click', function() {
+        // });
 
 
-        // al click del div .close tutti i div != da loginBox prendono la classe d-none
-        closeButton.addEventListener('click', function() {
-            gameBoard.classList.add('d-none');
-            denied.classList.add('d-none');
-            loginBox.classList.remove('d-none');
-        });
+        // // al click del div .close tutti i div != da loginBox prendono la classe d-none
+        // closeButton.addEventListener('click', function() {
+        //     gameBoard.classList.add('d-none');
+        //     denied.classList.add('d-none');
+        //     loginBox.classList.remove('d-none');
+        // });
