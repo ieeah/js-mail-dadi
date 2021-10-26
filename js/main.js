@@ -17,7 +17,8 @@
         // la schermata di errore al login
         const denied = document.getElementById('denied');
         // i pulsanti di chiusura
-        const closeButton = document.querySelectorAll('.close');
+        const closeButton1 = document.getElementById('close1');
+        const closeButton2 = document.getElementById('close2');
         // il pulsante di generazione dei numeri
         const genButton = document.getElementById('generate');
         // il dado dell'utente
@@ -96,7 +97,18 @@
 
 
         // // al click del div .close tutti i div != da loginBox prendono la classe d-none
-        closeButton.addEventListener('click', function() {
+        // closeButton.addEventListener('click', function() {
+        //     gameBoard.classList.add('d-none');
+        //     denied.classList.add('d-none');
+        //     loginBox.classList.remove('d-none');
+        // });
+
+        closeButton1.addEventListener('click', function() {
+            gameBoard.classList.add('d-none');
+            denied.classList.add('d-none');
+            loginBox.classList.remove('d-none');
+        });
+        closeButton2.addEventListener('click', function() {
             gameBoard.classList.add('d-none');
             denied.classList.add('d-none');
             loginBox.classList.remove('d-none');

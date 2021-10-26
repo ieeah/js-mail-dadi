@@ -21,13 +21,15 @@
         </form>
     </div>
     <div id="denied" class="text-center d-flex justify-content-center align-items-center flex-wrap px-3 position-relative d-none">
-        <div class="close rounded-circle text-center">X</div>
+        <div id="close1" class="close rounded-circle text-center">
+            <span class="align-middle">X</span>
+        </div>
         <h2 class="my-5">Qualcosa è andato storto! :(</h2>
         <div class="fs-5 mb-3">purtroppo non abbiamo trovato la tua mail nel nostro database.</div>
         <div class="unactive mb-3">contatta <a href="mailto:assistenza@ciao.com">la nostra assistenza</a> se ti eri precedentemente registrato</div>
     </div>
     <div id="game" class="text-center d-flex justify-content-center align-items-center flex-wrap px-3 d-none position-relative">
-        <div id="close" class="rounded-circle text-center">X</div>
+        <div id="close2" class="rounded-circle text-center">X</div>
         <div id="generate" class="btn rounded-pill col-5">Generate</div>
         <div class="container-fluid">
             <div class="row px-3 justify-content-evenly h-25">
@@ -35,10 +37,10 @@
                 <h2 class="col">PC</h2>
             </div>
             <div class="row px-3 h-75">
-                <div class="col-6 justify-content-center d-flex my-3">
+                <div class="col-6 justify-content-center align-items-center d-flex my-3">
                     <div class="dado" id="n1"></div>
                 </div>
-                <div class="col-6 justify-content-center d-flex my-3">
+                <div class="col-6 justify-content-center align-items-center d-flex my-3">
                     <div class="dado" id="n2"></div>
                 </div>
             </div>
