@@ -51,4 +51,18 @@
             }
         });
 
-        const genButton
+
+
+
+        // al click del bottone si dovrà generare un numero, compreso tra 1 e 6
+        // generare un secondo numero, compreso tra 1 e 6
+        // stampare, all'interno di .dado #n1 e #n2 i due numeri generati
+        // determinare quale dei due sia maggiore
+        // stampare chi ha vinto
+        const genButton = document.getElementById('generate');
+        genButton.addEventListener('click', function() {
+
+        });
+
+
+        // al click del div .close tutti i div != da loginBox prendono la classe d-none

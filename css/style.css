@@ -13,8 +13,14 @@ body {
     height: 100vh;
 }
 
-.fsz-12px {
+.unactive {
     font-size: 12px;
+    color: grey;
+}
+
+.unactive a {
+    color:rgba(201,134,227,1);
+    text-decoration: none;
 }
 
 #login-box,
