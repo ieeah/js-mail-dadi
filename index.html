@@ -14,7 +14,7 @@
             <div class="container-fluid">
                 <div class="row d-flex justify-content-center align-items-center px-5">
                     <input class="col-12 rounded-pill" type="email" name="mail" id="mail" placeholder="Inserisci qui la tua mail">
-                    <button class="col-12 mt-5 rounded-pill" id="btn-login">Login</button>
+                    <div class="btn col-12 mt-5 rounded-pill" id="btn-login">Login</div>
                 </div>
             </div>
             
@@ -25,8 +25,9 @@
         <div class="fs-5">purtroppo non abbiamo trovato la tua mail nel nostro database.</div>
         <div class="fsz-12px">contatta <a href="mailto:assistenza@ciao.com">la nostra assistenza</a> se ti eri precedentemente registrato</div>
     </div>
-    <div id="game" class="text-center d-flex justify-content-center align-items-center flex-wrap px-3 d-none">
-        <button id="generate" class="rounded-pill col-5">Generate</button>
+    <div id="game" class="text-center d-flex justify-content-center align-items-center flex-wrap px-3 d-none position-relative">
+        <div class="close rounded-circle text-center">X</div>
+        <div id="generate" class="btn rounded-pill col-5">Generate</div>
         <div class="container-fluid">
             <div class="row px-3 justify-content-evenly h-25">
                 <h2 class="col">You</h2>
@@ -34,10 +35,10 @@
             </div>
             <div class="row px-3 h-75">
                 <div class="col-6 justify-content-center d-flex my-3">
-                    <div class="dado"></div>
+                    <div class="dado" id="n1"></div>
                 </div>
                 <div class="col-6 justify-content-center d-flex my-3">
-                    <div class="dado"></div>
+                    <div class="dado" id="n2"></div>
                 </div>
             </div>
         </div>
