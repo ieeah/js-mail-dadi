@@ -20,6 +20,10 @@
         const closeButton = document.querySelectorAll('.close');
         // il pulsante di generazione dei numeri
         const genButton = document.getElementById('generate');
+        // il dado dell'utente
+        const dado1 = document.getElementById('n1');
+        // il dado del pc
+        const dado2 = document.getElementById('n2');
 
 
         // creazione dell'array contenente gli indirizzi mail autorizzati all'accesso
@@ -71,10 +75,15 @@
         // // al click del bottone si dovrà generare un numero, compreso tra 1 e 6
         // // generare un secondo numero, compreso tra 1 e 6
         // // stampare, all'interno di .dado #n1 e #n2 i due numeri generati
+        genButton.addEventListener('click', function() {
+            const n1 = Math.floor(Math.random() * 6) + 1;
+            const n2 = Math.floor(Math.random() * 6) + 1;
+            dado1.innerText = `${n1}`;
+            dado2.innerText = `${n2}`;
+
         // // determinare quale dei due sia maggiore
         // // stampare chi ha vinto
-        // genButton.addEventListener('click', function() {
-        // });
+        });
 
 
         // // al click del div .close tutti i div != da loginBox prendono la classe d-none

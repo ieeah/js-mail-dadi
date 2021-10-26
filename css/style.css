@@ -74,6 +74,8 @@ input:focus {
 .dado {
     width: 100px;
     height: 100px;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .close {
