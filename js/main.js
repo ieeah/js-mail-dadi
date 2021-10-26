@@ -31,22 +31,21 @@
                 // controllo presenza mail nella lista mailList
                 //altrimenti creiamo una flag
                 let foundMail = false;
-                for (i = 0; i < mailList.length ; i++) {
+                for (i = 0; i <= 4 ; i++) {
                     //se la mail inserita è uguale ad una delle mail contenute nell'array
                     if (nowMail === mailList[i]) {
                         //alla flag viene associato un valore true
                         foundMail = true;
                         //viene eseguito l'accesso
-                        alert('accesso eseguito');
-                        // il ciclo viene interrotto
+                        loginBox.classList.add('d-none');
+                        document.getElementById('game').classList.remove('d-none');
                         break;
                     } else {
                         foundMail = false;
-                        alert('accesso negato!');
-                        // loginBox.classList.add('d-none');
-                        // document.getElementById('denied').classList.remove('d-none');
+                        loginBox.classList.add('d-none');
+                        document.getElementById('denied').classList.remove('d-none');
                         break;
-                        
+
                     }
                 }
             }
